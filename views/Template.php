@@ -20,14 +20,14 @@
 
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
                 <?php require 'Menu.php';?>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-10 offset-1">
+            <div class="col-sm-12 offset-1">
                 <H1 class="text-center"> <?php echo $titre ?></H1>
             </div>
         </div>

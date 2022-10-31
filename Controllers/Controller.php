@@ -38,6 +38,7 @@ function seDeconnecter()
 }
 
 function panier(){
+    
     require 'views/Panier.php';
 }
 
