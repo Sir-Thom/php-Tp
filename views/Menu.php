@@ -18,12 +18,11 @@
                 <div class="navbar-nav  ms-auto">
                 
                
-                <a class="nav-link <?php navClass("connexion");?>"
-                        href="index.php?action=connexion">
-                        <i style="color:white;" class="fa-solid fa-cart-shopping fa-md">  </i>
-                        Panier
-                
-                    
+                <a class="nav-link <?php navClass("panier");?>"
+                        href="index.php?action=panier">
+                        <i style="color:white;" class="fa-solid fa-cart-shopping fa-md">
+                    </i>
+                        Panier    
                 </a>
                 </div>
             </div>
@@ -33,8 +32,8 @@
                 <div class="navbar-nav  ms-auto">
                 
                    <!-- template pour inscription !--> 
-                <a class="nav-link <?php navClass("connexion");?>"
-                        href="index.php?action=connexion">
+                <a class="nav-link <?php navClass("inscription");?>"
+                        href="index.php?action=inscription">
                         Inscription
                 </a>
                 </div>
