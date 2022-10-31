@@ -1,10 +1,9 @@
 <!-- Nav tabs -->
-<header>
 
-</header>
 <script></script>
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg d">
     <div class="container-fluid">
+    <i  style="color:white;" class="fa-solid fa-hotdog"></i>
         <a class="navbar-brand" href="index.php">Accueil</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
