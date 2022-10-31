@@ -13,6 +13,9 @@ try {
         return accueil();
     }
     switch ($_GET['action']) {
+        case 'inscription':
+            inscription();
+            break;
         case 'connexion':
             connexion();
             break;
@@ -24,6 +27,9 @@ try {
             break;
         case "seDeconnecter":
             seDeconnecter();
+            break;
+        case "panier":
+            panier();
             break;
         default:
             throw new Exception('Aucune page spécifique demandée');
