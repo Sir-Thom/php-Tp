@@ -5,10 +5,10 @@
 <h3> 
 <?php 
     if(empty($_SESSION)){
-         echo "Bienvenue sur ce site veuillez vous connecter." ;
+         echo htmlentities("Bienvenue sur ce site veuillez vous connecter.");
         }
     else{
-        echo "Bienvenue sur ce site"+ $_SESSION;
+        echo htmlentities("Bienvenue sur ce site ".$_SESSION['username']);
     }
    
 ?>
