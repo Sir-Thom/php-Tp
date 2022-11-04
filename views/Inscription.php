@@ -19,7 +19,7 @@
         <div class="col-sm-10">
             <input type="text" class="form-control" id="username"
                 name="username" placeholder="Nom d'utilisateur" minlength="3"
-                maxlength="64" required>
+                maxlength="50" required>
             <div class="invalid-feedback">
                 Nom d'utilisateur est obligatoire et doit avoir entre 3 et 64
                 caractères
