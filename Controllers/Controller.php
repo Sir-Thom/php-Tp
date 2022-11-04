@@ -11,7 +11,7 @@ else
 }   
 //var_dump($_SESSION);
 
-// Ajouter votre manager
+
 require_once 'models/Manager.php';
 function accueil()
 {
@@ -45,15 +45,30 @@ function panier(){
 function seConnecter()
 {
    // gros commentaire qui veux dire sa marche pas
-   require_once 'models/ManagerUser.php';
+   require_once 'models/ManagerClient.php';
+   if(empty(htmlentities($_POST["username"]))&& empty( htmlentities($_POST["password"]))){
+    header("location:index.php?action=connexion");   
+     
+}
+
+   $Managerclient = new ManagerClient();
+    $Managerclient->UserConnexion($_POST["username"],$_POST["password"]);
    
-   /* $ManagerUser = new ManagerUser();
-    $ManagerUser->UserConnexion($_POST["username"],$_POST["password"]);
-     //$ManagerUser->getUser();
-    //echo $ManagerUser->getUser();
-    $userinfo = $ManagerUser->UserConnexion($_POST["username"],$_POST["password"]);
-    //echo $userinfo;
-   header("location:index.php?action=accueil");*/
+    $userinfo = $Managerclient->UserConnexion($_POST["username"],$_POST["password"]);
+    echo $userinfo;
+    if ($userinfo == true ){
+        $_SESSION["username"] = $_POST["username"];
+        
+
+        //var_dump($_SESSION);
+       
+        header("location:index.php?action=accueil");
+        
+        
+    }else{
+        header("location:index.php?action=connexion");
+    }
+   //header("location:index.php?action=accueil");
     
 
     // Essayer de connecter l'utilisateur,
