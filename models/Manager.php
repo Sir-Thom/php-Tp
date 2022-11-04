@@ -7,7 +7,7 @@ class Manager
     protected function getConnexion()
     {
         $host = 'localhost'; // Nom de l'hôte
-        $db = 'bd_membre'; // Le nom de votre bd
+        $db = ' tbl_saucisse'; // Le nom de votre bd
         $charset = 'utf8'; // gestion des caractères envoyés au serveur
         $user = 'root'; // le nom d'utilisateur
         $pass = ''; // le mot de passe
