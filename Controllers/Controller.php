@@ -13,6 +13,7 @@ else
 
 
 require_once 'models/Manager.php';
+
 function accueil()
 {
     require 'views/Accueil.php';
@@ -75,4 +76,12 @@ function seConnecter()
     // puis rediriger ver l'accueil en cas de réussite
     // ou vers la page de connexion en cas d'échec.
     
+}
+
+require 'models/ManagerSaucisse.php';
+function listeSaucisse()
+{
+    $Saucisse = new ManagerSaucisse;
+    $resultatSaucisse = $Saucisse->getSaucisse();
+    require 'views/Accueil.php';
 }

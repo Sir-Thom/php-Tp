@@ -35,16 +35,15 @@
                 caractères
             </div>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
+        <div class="row">
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">
+                Se connecter
+            </button>
+        </div>        
+    </div>
+</form>
 
-  </form>
-</main>
-
-
-    
-  
-
-</body>
 
 <script src="js/validationFormulaire.js"></script>
 
