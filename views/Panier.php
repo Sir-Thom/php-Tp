@@ -14,7 +14,6 @@ if(empty($_SESSION)){?>
     
 
 
-
     <div class="container mt-3">
         <table class="table mt-3 table-striped table-secondary">
             <thead>
