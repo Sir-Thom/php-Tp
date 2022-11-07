@@ -28,11 +28,20 @@
                 </a>
         </li>
         <li class="nav-item">
-        <a class="nav-link <?php navClass("connexion");?>"
-                        href="index.php?action=connexion">
-                        Se connecter <i style="color:white;" class="fa-solid fa-right-to-bracket"></i>
-                    </a>
-        </li>
+        <?php 
+                    if(isset( $_SESSION["username"])){?>
+                   <a class="nav-link <?php navClass("connexion");?>"
+                    href="index.php?action=seDeconnecter">Se Déconneter <i style="color:white;" class="fa-solid fa-right-from-bracket"></i></a>
+                    <?php
+                    }                
+                
+                    if(!isset( $_SESSION["username"])){?>
+                    <a class="nav-link <?php navClass("connexion");?>"
+                    href="index.php?action=connexion">Se connecter <i style="color:white;" class="fa-solid fa-right-to-bracket"></i></a>
+                    <?php
+                    }?>
+
+
       </ul>
     </div>
   </div>

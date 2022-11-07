@@ -11,26 +11,24 @@ class ManagerClient extends Manager{
             $reponse->bindparam('varusername', $user, PDO::PARAM_STR);
             
             $reponse->execute();
+            $verif1 =  null;
             //va recup tous ce qui rapport avec le user qui se connect
             $getpass = $reponse->fetch();
-            if ( $getpass)  {
+
+            if ($getpass)  {
+                $word = $pass;
+                $hash =$getpass['motDePasse'];
                
-                return true;
+                
+                return password_verify($word, $hash);
                 
                
                 } else {
                     return false;
                 }
-            $getpass['MotDePasse'] = $pass; //password décrypter
-            $getpass['MotDePasse'].password_verify($pass, $getpass['MotDePasse']);
-            if ( $reponse->fetch())  {
-               
-                return true;
-                
-               
-                } else {
-                    return false;
-                }
+       
+           
+           
     }
 }
 ?>

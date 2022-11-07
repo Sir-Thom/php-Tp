@@ -12,7 +12,7 @@ USE tbl_saucisse;
 CREATE TABLE tbl_utilisateur(
         id_utilisateur Int  Auto_increment  NOT NULL ,
         nomUtilisateur Varchar (50) NOT NULL ,
-        motDePasse     Varchar (50) NOT NULL
+        motDePasse     Varchar (120) NOT NULL
 	,CONSTRAINT tbl_utilisateur_PK PRIMARY KEY (id_utilisateur)
 	,CONSTRAINT AK_nomUtilisateur UNIQUE(nomUtilisateur)
     
