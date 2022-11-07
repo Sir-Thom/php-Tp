@@ -8,45 +8,43 @@
     <button type="button" class="btn-close" data-bs-dismiss="alert"
         aria-label="Close"></button>
 </div> -->
-
-<form form method="post"  action="index.php?action=seConnecter" enctype="multipart/form-data"
+<br />
+<body class="text-center">    
+<main class="form-signin w-100 m-auto">
+  <form data-bitwarden-watching="1" form method="post"  action="index.php?action=seConnecter" enctype="multipart/form-data"
     class="my-2 needs-validation" method="POST" novalidate>
-    <div class="row mb-3">
-        <label for="username" class="col-sm-2 col-form-label">
-            Nom d'utilisateur&nbsp;:
-        </label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="username"
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="username"
                 name="username" placeholder="Nom d'utilisateur" minlength="3"
-                maxlength="64" required>
-            <div class="invalid-feedback">
+                maxlength="64" requiredtype="username" class="form-control" id="floatingInput username" >
+                <div class="invalid-feedback">
                 Nom d'utilisateur est obligatoire et doit avoir entre 3 et 64
                 caractères
             </div>
-        </div>
+      <label for="floatingInput">Nom d'utilisateur&nbsp;:</label>
     </div>
-    <div class="row mb-3">
-        <label for="password" class="col-sm-2 col-form-label">
-            Mot de passe&nbsp;:
-        </label>
-        <div class="col-sm-10">
-            <input type="password" class="form-control" id="username"
+    <div class="form-floating">
+      <input   type="password" id="username"
                 name="password" placeholder="Mot de passe" minlength="3"
-                maxlength="64" required>
-            <div class="invalid-feedback">
+                maxlength="64" required class="form-control" id="floatingPassword">
+      <label for="floatingPassword">Mot de passe&nbsp;:</label>
+      <div class="invalid-feedback">
                 Mot de passe est obligatoire et doit avoir entre 3 et 64
                 caractères
             </div>
-        </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <button class="btn btn-primary" type="submit">
-                Se connecter
-            </button>
-        </div>
-    </div>
-</form>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
+
+  </form>
+</main>
+
+
+    
+  
+
+</body>
 
 <script src="js/validationFormulaire.js"></script>
 
