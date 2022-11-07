@@ -1,4 +1,9 @@
 <?php
+// ----------------------------------------------------------------
+// Fait par :
+// Thomas  Toulouse
+// Maxance Gusse
+// ----------------------------------------------------------------
 echo 'Canard hash: ' . password_hash('manger', PASSWORD_DEFAULT). "<br>";
 echo 'Joe hash: ' . password_hash('Bloe', PASSWORD_DEFAULT). "<br>";
 echo 'Ken hash: ' . password_hash('kababoum', PASSWORD_DEFAULT). "<br>";
