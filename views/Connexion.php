@@ -25,9 +25,9 @@
 <div class="row d-flex justify-content-center  text-center">
 
 
-<div class="col-4 justify-content-center text-center ">
+<div class="col-4 d-flex justify-content-center text-center ">
   <form data-bitwarden-watching="1" form method="post"  action="index.php?action=seConnecter" enctype="multipart/form-data"
-    class=" text-center form-signin my-2 needs-validation" method="POST" style="max-width:400px" novalidate>
+    class=" text-center form-signin my-2 needs-validation" method="POST" style="max-width:500px" novalidate>
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
@@ -40,6 +40,7 @@
             </div>
       <label for="floatingInput">Nom d'utilisateur&nbsp;:</label>
     </div>
+    <br />
     <div class="form-floating">
       <input   type="password" id="username"
                 name="password" placeholder="Mot de passe" minlength="3"
@@ -50,6 +51,7 @@
                 caractères
             </div>
     </div>
+    <br />
     <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
 
   </form>
