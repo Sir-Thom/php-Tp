@@ -36,6 +36,7 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-sm-12 mx-auto ">
                 <?php echo $contenu ?>
             </div>
         </div>

@@ -4,6 +4,9 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
   <div class="container-fluid">
+    <a style="font-size: 20px;" class="navbar-brand" <?php navClass("accueil");?>"
+                        href="index.php?action=accueil">
+                        <i style="color:white;" class="fa-solid fa-hotdog fa-md"></i> Accueil</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,6 +30,7 @@
         <li class="nav-item">
         <a class="nav-link <?php navClass("connexion");?>"
                         href="index.php?action=connexion">
+                        Se connecter <i style="color:white;" class="fa-solid fa-right-to-bracket"></i>
                     </a>
         </li>
       </ul>
