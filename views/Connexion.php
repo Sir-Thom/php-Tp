@@ -35,8 +35,7 @@
                 caractères
             </div>
     </div>
-<<<<<<< HEAD
-    <div class="row">
+        <div class="row">
         <div class="col-12">
             <button class="btn btn-primary" type="submit">
                 Se connecter
@@ -44,18 +43,7 @@
         </div>        
     </div>
 </form>
-=======
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
 
-  </form>
-</main>
-
-
-    
-  
-
-</body>
->>>>>>> main
 
 <script src="js/validationFormulaire.js"></script>
 

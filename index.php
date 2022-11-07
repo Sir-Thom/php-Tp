@@ -10,7 +10,7 @@ require 'controllers/Controller.php';
 
 try {
     if (!isset($_GET['action'])) {
-        return accueil();
+        return listeSaucisse();
     }
     switch ($_GET['action']) {
         case 'inscription':
@@ -20,7 +20,7 @@ try {
             connexion();
             break;
         case 'accueil':
-            accueil();
+            listeSaucisse();
             break;
         case 'seConnecter':
             seConnecter();

@@ -13,6 +13,7 @@ else
 
 
 require_once 'models/Manager.php';
+
 function accueil()
 {
     require 'views/Accueil.php';
@@ -77,9 +78,10 @@ function seConnecter()
     
 }
 
+require 'models/ManagerSaucisse.php';
 function listeSaucisse()
 {
     $Saucisse = new ManagerSaucisse;
     $resultatSaucisse = $Saucisse->getSaucisse();
-    require 'view/Accueil.php';
+    require 'views/Accueil.php';
 }

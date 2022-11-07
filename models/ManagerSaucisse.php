@@ -1,6 +1,6 @@
 <?php
 
-require_once "model/Manager.php"; // On pourra utiliser la connexion
+require_once "models/Manager.php"; // On pourra utiliser la connexion
 
 // Hérite de la classe Manager
 class ManagerSaucisse extends Manager
