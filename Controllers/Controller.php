@@ -76,3 +76,10 @@ function seConnecter()
     // ou vers la page de connexion en cas d'échec.
     
 }
+
+function listeSaucisse()
+{
+    $Saucisse = new ManagerSaucisse;
+    $resultatSaucisse = $Saucisse->getSaucisse();
+    require 'view/Accueil.php';
+}

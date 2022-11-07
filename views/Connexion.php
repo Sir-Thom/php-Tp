@@ -44,7 +44,7 @@
             <button class="btn btn-primary" type="submit">
                 Se connecter
             </button>
-        </div>
+        </div>        
     </div>
 </form>
 
