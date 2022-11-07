@@ -18,6 +18,8 @@
     <!-- sweetalert2 (swal) https://sweetalert2.github.io/ -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/aa99fe7e94.js" crossorigin="anonymous"></script>
+     <!-- Bootstrap icons CSS https://getbootstrap.com/-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <style>
     body { font-family: 'Fira Code', monospace; }

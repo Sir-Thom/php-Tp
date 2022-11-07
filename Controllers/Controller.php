@@ -36,6 +36,7 @@ function seDeconnecter()
     // Faites votre déconnexion, puis rediriger vers l'accueil
     session_unset(); 
     session_destroy();
+    header("location:index.php?action=accueil");
 }
 
 function panier(){
@@ -53,23 +54,24 @@ function seConnecter()
 }
 
    $Managerclient = new ManagerClient();
-    $Managerclient->UserConnexion($_POST["username"],$_POST["password"]);
-   
+  
+
     $userinfo = $Managerclient->UserConnexion($_POST["username"],$_POST["password"]);
     echo $userinfo;
     if ($userinfo == true ){
         $_SESSION["username"] = $_POST["username"];
         
 
-        //var_dump($_SESSION);
+      
        
         header("location:index.php?action=accueil");
         
         
     }else{
+        $_SESSION["error"] ='error';
         header("location:index.php?action=connexion");
     }
-   //header("location:index.php?action=accueil");
+   
     
 
     // Essayer de connecter l'utilisateur,

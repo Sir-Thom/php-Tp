@@ -2,17 +2,32 @@
 
 <?php ob_start();?>
 
-<?php //mettre votre message s'il y a lieu ?>
-<!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
-    votre message...
+<?php if(isset($_SESSION['error'])){?>
+<div  id="alert"class=" alert alert-danger alert-dismissible fade show" role="alert">
+<i class="bi bi-exclamation-triangle-fill"></i>
+      erreur lors de la connexion 
+
     <button type="button" class="btn-close" data-bs-dismiss="alert"
         aria-label="Close"></button>
-</div> -->
+</div> 
+<?php
+}else{?>
+<div  id="alert"class="alert alert-danger alert-dismissible fade hide" role="alert">
+<i class="fa-solid fa-hexagon-exclamation"></i>connexion invalide
+    <button type="button" class="btn-close" data-bs-dismiss="alert"
+        aria-label="Close"></button>
+</div> 
+<?php
+}
+ ?>
 <br />
-<body class="text-center">    
-<main class="form-signin w-100 m-auto">
+
+<div class="row d-flex justify-content-center  text-center">
+
+
+<div class="col-4 d-flex justify-content-center text-center ">
   <form data-bitwarden-watching="1" form method="post"  action="index.php?action=seConnecter" enctype="multipart/form-data"
-    class="my-2 needs-validation" method="POST" novalidate>
+    class=" text-center form-signin my-2 needs-validation" method="POST" style="max-width:500px" novalidate>
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
@@ -25,6 +40,7 @@
             </div>
       <label for="floatingInput">Nom d'utilisateur&nbsp;:</label>
     </div>
+    <br />
     <div class="form-floating">
       <input   type="password" id="username"
                 name="password" placeholder="Mot de passe" minlength="3"
@@ -35,15 +51,19 @@
                 caractères
             </div>
     </div>
-        <div class="row">
-        <div class="col-12">
-            <button class="btn btn-primary" type="submit">
-                Se connecter
-            </button>
-        </div>        
-    </div>
-</form>
+    <br />
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
 
+  </form>
+  </div>
+
+
+
+
+    
+  
+
+</body>
 
 <script src="js/validationFormulaire.js"></script>
 
