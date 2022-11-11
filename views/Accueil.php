@@ -19,9 +19,10 @@
 <body>
   <div class="album py-5">
     <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row">
     
         <?php while ($enregistrement = $resultatSaucisse->fetch()) {?>
+          <div class="col-md-3">
           <div class="card-body">
             <p class="card-text"> <?php echo $enregistrement['nom'] ?> </p>
               <div class="d-flex justify-content-between align-items-center">
@@ -36,7 +37,8 @@
               </small>
               </div>
               </div>
-              <div class="col">
+              
+              <div class="col-md-4">
               <div class="card shadow-sm">
               <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
               <image href="<?php echo $enregistrement['destinationImage'] ?>" height="200" width="200" />
@@ -44,7 +46,7 @@
               </br>
         <?php }?>
               <?php $resultatSaucisse->closeCursor();?>
-
+              </div>
       </div>
     </div>
   </div>
