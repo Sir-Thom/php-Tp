@@ -19,17 +19,17 @@
 <body>
   <div class="album py-2">
     <div class="container">
-      <div class="row">
+      <div class="row  gy-5">
         
           <?php while ($enregistrement = $resultatSaucisse->fetch()) {?>
-            <div class="col-md-4">
+            <div class="col-md-4 ">
               <div class="card">
                 <p class="card-title"> <?php echo $enregistrement['nom'] ?> 
                 </p>            
                   <div class="col">
                     <div class="shadow-sm">
-                      <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                        <image href="<?php echo $enregistrement['destinationImage'] ?>" height="200" width="200"/>
+                      <svg  class="img-responsive tocenter" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                        <image class="img-responsive tocenter" href="<?php echo $enregistrement['destinationImage'] ?>" height="200" width="200"/>
                       </svg>
                       </br>
                     </div>
@@ -39,13 +39,14 @@
                       <label> <?php echo $enregistrement['prix'] ?>$ 
                       </label>             
                     </div>
-                  </div>
+                  
                   <small class="text-muted">
                     <button type="button" class="btn btn-sm btn-outline-secondary">ajouter au panier 
                       <i class="fa-solid fa-cart-shopping fa-md">
                       </i>  
                     </button>
                   </small>
+                  </div>
               </div>
             </div>
             <?php }?>
