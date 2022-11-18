@@ -25,11 +25,6 @@ function connexion()
     
    
 }
-function inscription()
-{
-    require 'views/Inscription.php';
-
-}
 
 function seDeconnecter()
 {
