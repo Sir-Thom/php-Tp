@@ -80,6 +80,15 @@ function seConnecter()
     
 }
 
+function obtenirSaucisse(){
+    /*if (!isset ($_POST["codePays"])){return;}
+    $codePays =htmlentities(($_POST["codePays"]));
+    //$pays = new ;
+    $resultatPays= $pays->obtenirProvinces($codePays);
+    //echo $resultatPays;
+    echo json_encode($pays->obtenirProvinces($codePays));*/
+}
+
 require 'models/ManagerSaucisse.php';
 function listeSaucisse()
 {

@@ -1,10 +1,17 @@
+
+
+
+
 document.addEventListener("DOMContentLoaded", abonnement());
 
-function abonnement (){
-   const items = document.querySelectorAll(".drapeau");
-   for (const drapeau of items) {
-    drapeau.addEventListener("click",DrapeauClick);
+function abonnement(){
+   const items = document.querySelectorAll(".saucisse");
+   console.log(items)
+   for (const saucisse of items) {
+    saucisse.addEventListener("click",SaucisseClick);
+   
    }
+   console.log("penis");
 }
 
 function AfficherCodepays(codePays){
@@ -16,17 +23,17 @@ function AfficherProvince(provinces) {
     console.log(provinces)
 }
 
-function DrapeauClick(event) {
+function SaucisseClick(event) {
   
     
-    const drapeau = event.currentTarget;
-    const codePays = drapeau.id;
+    const saucisse = event.currentTarget;
+    const idsaucisse = saucisse.id;
     const formData = new FormData();
     
-    formData.append("codePays",codePays)
+    formData.append("idsaucisse",idsaucisse)
      /* donne le ID de l'image */
     //Swal.fire(monId);
-    fetch("index.php?action=obtenirProvinces" ,{
+    fetch("index.php?action=obtenirSaucisse" ,{
         method:"POST",
         body:formData,
     })
@@ -38,7 +45,7 @@ function DrapeauClick(event) {
         
     })
     .then(provinces => {
-        AfficherCodepays(codePays);
-        AfficherProvince(provinces);
+        //AfficherCodepays(codePays);
+       // AfficherProvince(provinces);
     });
 }

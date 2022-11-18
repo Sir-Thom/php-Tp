@@ -23,7 +23,7 @@
         
           <?php while ($enregistrement = $resultatSaucisse->fetch()) {?>
             <div class="col-md-4 ">
-              <div class="card">
+              <div class=" card">
                 <p class="card-title"> <?php echo $enregistrement['nom'] ?> 
                 </p>            
                   <div class="col">
@@ -41,7 +41,7 @@
                     </div>
                   
                   <small class="text-muted">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">ajouter au panier 
+                    <button type="button" class="saucisse btn btn-sm btn-outline-secondary ">ajouter au panier 
                       <i class="fa-solid fa-cart-shopping fa-md">
                       </i>  
                     </button>
@@ -57,5 +57,6 @@
   </div>
 </body>
 <?php $contenu = ob_get_clean();?>
+<script type="text/javascript" src="js/Panier.js"></script>
 
 <?php require 'Template.php';?>
