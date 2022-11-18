@@ -6,7 +6,7 @@
 <br />
 <h3> 
 <?php 
-    if(empty($_SESSION)){
+    if(empty($_SESSION['username'])){
          echo htmlentities("Bienvenue sur ce site veuillez vous connecter.");
         }
     else{
