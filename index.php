@@ -13,9 +13,6 @@ try {
         return listeSaucisse();
     }
     switch ($_GET['action']) {
-        case 'inscription':
-            inscription();
-            break;
         case 'connexion':
             connexion();
             break;

@@ -21,12 +21,7 @@
                         Panier    
                 </a>
         </li>
-        <li class="nav-item">
-        <a class="nav-link <?php navClass("inscription");?>"
-                        href="index.php?action=inscription">
-                        Inscription
-                </a>
-        </li>
+        
         <li class="nav-item">
         <?php 
                     if(isset( $_SESSION["username"])){?>
