@@ -18,6 +18,10 @@ try {
             break;
         case 'accueil':
             listeSaucisse();
+            
+            break;
+        case 'obtenirSaucisse':
+            obtenirSaucisse();
             break;
         case 'seConnecter':
             seConnecter();
@@ -27,6 +31,7 @@ try {
             break;
         case "panier":
             panier();
+            
             break;
         default:
             throw new Exception('Aucune page spécifique demandée');

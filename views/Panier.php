@@ -74,7 +74,7 @@
 <?php } ?>
                 
    
-
+<script src="js/Panier.js"></script>
 <?php $contenu = ob_get_clean();?>
 
 <?php require 'template.php';?>

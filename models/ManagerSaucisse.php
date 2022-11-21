@@ -15,4 +15,6 @@ class ManagerSaucisse extends Manager
         $saucisses = $this->getConnexion()->query($sql);
         return $saucisses;
     }
+ 
+        
 }
