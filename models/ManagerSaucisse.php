@@ -9,11 +9,22 @@ class ManagerSaucisse extends Manager
     public function getSaucisse()
     {
         $sql = 'SELECT *
-				FROM tbl_saucisse
+				From tbl_saucisse
 				ORDER BY nom';
         // Exécution directe
         $saucisses = $this->getConnexion()->query($sql);
         return $saucisses;
+    }
+    public function GetIdSaucisse(){
+      
+    
+        $sql = 'SELECT *
+				From tbl_saucisse
+				Where id_saucisse';
+        // Exécution directe
+        $saucisses = $this->getConnexion()->query($sql);
+        return $saucisses;
+    
     }
  
         

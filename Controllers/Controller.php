@@ -56,12 +56,11 @@ function seConnecter()
    $Managerclient = new ManagerClient();
   
 
-    $userinfo = $Managerclient->UserConnexion($_POST["username"],$_POST["password"]);
+    $userinfo = $Managerclient->UserConnexion($_POST["id"], $_POST["username"],$_POST["password"]);
     echo $userinfo;
     if ($userinfo == true ){
         $_SESSION["username"] = $_POST["username"];
-        
-
+        $_SESSION["idpanier"] = $_POST["id"];
       
        
         header("location:index.php?action=accueil");
@@ -85,11 +84,11 @@ function obtenirSaucisse(){
     $codeSaucisse =htmlentities(($_POST["idsaucisse"]));
   
     $panier = new ManagerPanier;
-    $resultatPays= $panier->obtenirSaucisse($codeSaucisse);
+    $id = $panier->obtenirSaucisse($codeSaucisse);
     //echo $resultatPays;
     //envoye code 
 
-    echo json_encode($resultatPays);
+    echo json_encode($id);
 
 
     /*if (!isset ($_POST["codePays"])){return;}

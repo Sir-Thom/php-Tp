@@ -16,7 +16,7 @@
                     event.stopPropagation();
                     $('.alert').alert()
                 }
-                $('.alert').alert('dispose')
+               // $('.alert').alert('dispose')
                 form.classList.add("was-validated");
             },
             false
