@@ -60,7 +60,7 @@ function seConnecter()
     echo $userinfo;
     if ($userinfo == true ){
         $_SESSION["username"] = $_POST["username"];
-        $_SESSION["idpanier"] = $_POST["id"];
+        $_SESSION["idpanier"] = $userinfo[1];
       
        
         header("location:index.php?action=accueil");
