@@ -7,10 +7,10 @@
 <h3> 
 <?php 
     if(empty($_SESSION['username'])){
-         echo htmlentities("Bienvenue sur ce site veuillez vous connecter.");
+         echo htmlentities("Bienvenue sur ce site qualitatif des meilleurs saucisses du monde! Veuillez vous connecter.");
         }
     else{
-        echo htmlentities("Bienvenue sur ce site ".$_SESSION['username']);
+        echo htmlentities("Bienvenue sur ce site qualitatif des meilleurs saucisses du monde!".$_SESSION['username']);
     }
    
 ?>
@@ -37,7 +37,7 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <label> <?php echo $enregistrement['prix'] ?>$ 
-                      </label>             
+                      </label>         
                     </div>
                   
                   <small class="text-muted">
