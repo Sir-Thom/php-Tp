@@ -43,18 +43,18 @@ INSERT INTO tbl_saucisse
 (nom, prix, destinationImage)
 Values
 ('Saucisse de Toulouse', 				69.69,			'images/1.png'),
-('Chipolatas', 							20.04,			'images/2.png'),
+('Chipolatas', 						20.04,			'images/2.png'),
 ('Chipolatas aux herbes', 				26.95,			'images/3.png'),
 ('Chorizo à griller', 					2.91,			'images/4.png'),
-('Crépinette', 							8.99,			'images/5.png'),
-('Merguez', 							9.99,			'images/6.png'),
+('Crépinette', 						8.99,			'images/5.png'),
+('Merguez', 						9.99,			'images/6.png'),
 ('Soubressade piquante', 				19.65,			'images/7.png'),
 ('Saucisse au couteau', 				15.00,			'images/8.png'),
-("Saucisse au piment d'Espelette", 	    13.32,			'images/9.png'),
+("Saucisse au piment d'Espelette", 	                13.32,			'images/9.png'),
 ('Saucisse campagnarde', 				28.08,			'images/10.png'),
 ('Saucisse de canard', 					44.17,			'images/11.png'),
 ('Saucisse échalote', 					7.84,			'images/12.png'),
-('Saucisse méditerranéenne', 		    19.99,			'images/13.png'),
+('Saucisse méditerranéenne', 		                19.99,			'images/13.png'),
 ("Saucisse T'chorizette", 				99.99,			"images/14.png");
 
 #------------------------------------------------------------
