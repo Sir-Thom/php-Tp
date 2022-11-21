@@ -41,7 +41,7 @@
                     </div>
                   
                   <small class="text-muted">
-                    <button type="button" id="idsaucisse" class="saucisse btn btn-sm btn-outline-secondary ">ajouter au panier 
+                    <button type="button" id="<?php echo $enregistrement['id_saucisse'] ?>" class="saucisse btn btn-sm btn-outline-secondary ">ajouter au panier 
                       <i class="fa-solid fa-cart-shopping fa-md">
                       </i>  
                     </button>
