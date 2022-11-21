@@ -13,7 +13,7 @@ else
 
 
 require_once 'models/Manager.php';
-
+require "models/ManagerPanier.php";
 function accueil()
 {
     require 'views/Accueil.php';
@@ -81,14 +81,15 @@ function seConnecter()
 }
 
 function obtenirSaucisse(){
-    if (!isset ($_POST["codeSaucisse"])){return;}
-    $codeSaucisse =htmlentities(($_POST["codeSaucisse"]));
+    if (!isset ($_POST["idsaucisse"])){return;}
+    $codeSaucisse =htmlentities(($_POST["idsaucisse"]));
+  
     $panier = new ManagerPanier;
     $resultatPays= $panier->obtenirSaucisse($codeSaucisse);
-    echo $resultatPays;
+    //echo $resultatPays;
     //envoye code 
 
-    echo json_encode$(resultatPays);
+    echo json_encode($resultatPays);
 
 
     /*if (!isset ($_POST["codePays"])){return;}
@@ -99,7 +100,7 @@ function obtenirSaucisse(){
     echo json_encode($pays->obtenirProvinces($codePays));*/
 }
 
-require 'models/ManagerSaucisse.php';
+
 function listeSaucisse()
 {
     $Saucisse = new ManagerSaucisse;
