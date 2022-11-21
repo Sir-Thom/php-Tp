@@ -19,6 +19,8 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/aa99fe7e94.js" crossorigin="anonymous"></script>
      <!-- Bootstrap icons CSS https://getbootstrap.com/-->
+    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <style>
@@ -49,6 +51,7 @@
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous">
     </script>
+     <script type="text/javascript" src="js/Panier.js"></script>
 </body>
 
 </html>

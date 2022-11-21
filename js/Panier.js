@@ -6,28 +6,22 @@ document.addEventListener("DOMContentLoaded", abonnement());
 
 function abonnement(){
    const items = document.querySelectorAll(".saucisse");
-   console.log(items)
+   console.log(items) 
    for (const saucisse of items) {
     saucisse.addEventListener("click",SaucisseClick);
    
    }
-   console.log("penis");
+   
 }
 
-function AfficherCodepays(codePays){
-    const headerCodePays = document.querySelector("#CodePaysHeader");
-    CodePaysHeader.innerHTML = codePays
+function AfficherProvince(saucisse) {
+    console.log(saucisse)
 }
-
-function AfficherProvince(provinces) {
-    console.log(provinces)
-}
-
 function SaucisseClick(event) {
   
     
     const saucisse = event.currentTarget;
-    const idsaucisse = saucisse.id;
+    const idsaucisse = saucisse.parentElement;
     const formData = new FormData();
     
     formData.append("idsaucisse",idsaucisse)
@@ -44,8 +38,10 @@ function SaucisseClick(event) {
         return reponse.json();
         
     })
-    .then(provinces => {
+    
+    .then(saucisse => {
+        console.log("teste");
         //AfficherCodepays(codePays);
-       // AfficherProvince(provinces);
+       AfficherProvince(saucisse);
     });
 }

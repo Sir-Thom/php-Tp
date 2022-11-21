@@ -41,13 +41,18 @@ function panier(){
 
 function seConnecter()
 {
-   // gros commentaire qui veux dire sa marche pas
+   
+   
    require_once 'models/ManagerClient.php';
    if(empty(htmlentities($_POST["username"]))&& empty( htmlentities($_POST["password"]))){
     header("location:index.php?action=connexion");   
      
 }
-
+// créer var session
+    if(empty(htmlentities($_POST["idsaucisse"]))&& empty( htmlentities($_POST["idpanier"]))){
+        $_SESSION["idsaucisse"];
+        $_SESSION["idpanier"];
+    }
    $Managerclient = new ManagerClient();
   
 
@@ -76,6 +81,16 @@ function seConnecter()
 }
 
 function obtenirSaucisse(){
+    if (!isset ($_POST["codeSaucisse"])){return;}
+    $codeSaucisse =htmlentities(($_POST["codeSaucisse"]));
+    $panier = new ManagerPanier;
+    $resultatPays= $panier->obtenirSaucisse($codeSaucisse);
+    echo $resultatPays;
+    //envoye code 
+
+    echo json_encode$(resultatPays);
+
+
     /*if (!isset ($_POST["codePays"])){return;}
     $codePays =htmlentities(($_POST["codePays"]));
     //$pays = new ;
