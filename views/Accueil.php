@@ -37,6 +37,7 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <label> <?php echo $enregistrement['prix'] ?>$ 
+                      </label>         
                     </div>
                   
                   <small class="text-muted">
