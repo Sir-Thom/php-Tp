@@ -14,6 +14,7 @@ else
 
 require_once 'models/Manager.php';
 require "models/ManagerPanier.php";
+require_once 'models/ManagerClient.php';
 function accueil()
 {
     require 'views/Accueil.php';
@@ -43,7 +44,7 @@ function seConnecter()
 {
    
    
-   require_once 'models/ManagerClient.php';
+   
    if(empty(htmlentities($_POST["username"]))&& empty( htmlentities($_POST["password"]))){
     header("location:index.php?action=connexion");   
      
@@ -52,16 +53,18 @@ function seConnecter()
     if(empty(htmlentities($_POST["idsaucisse"]))&& empty( htmlentities($_POST["idpanier"]))){
         $_SESSION["idsaucisse"];
         $_SESSION["idpanier"];
+     
     }
    $Managerclient = new ManagerClient();
-  
+    
 
     $userinfo = $Managerclient->UserConnexion($_POST["id"], $_POST["username"],$_POST["password"]);
     echo $userinfo;
-    if ($userinfo == true ){
+    if ($userinfo[0] == true ){
         $_SESSION["username"] = $_POST["username"];
+    
         $_SESSION["idpanier"] = $userinfo[1];
-      
+       // $Managerclient->__addId($_SESSION["idpanier"],$_SESSION["idpanier"]);
        
         header("location:index.php?action=accueil");
         
@@ -84,13 +87,14 @@ function obtenirSaucisse(){
     $codeSaucisse =htmlentities(($_POST["idsaucisse"]));
   
     $panier = new ManagerPanier;
+    $_SESSION["idsaucisse"]=$codeSaucisse;
     $id = $panier->obtenirSaucisse($codeSaucisse);
     //echo $resultatPays;
     //envoye code 
+    
 
     echo json_encode($id);
-
-
+    
     /*if (!isset ($_POST["codePays"])){return;}
     $codePays =htmlentities(($_POST["codePays"]));
     //$pays = new ;

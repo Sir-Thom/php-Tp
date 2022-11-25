@@ -30,6 +30,7 @@ try {
             seDeconnecter();
             break;
         case "panier":
+            //echo $_SESSION["idpanier"];
             panier();
             
             break;

@@ -8,7 +8,7 @@
   <?php } ?>
 <br />
 
- 
+<?php echo $_SESSION["idpanier"];?>
 
   
 <?php if($_SESSION == ""){ ?>
