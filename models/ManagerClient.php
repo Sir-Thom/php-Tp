@@ -1,6 +1,6 @@
 <?php 
 require_once 'models/Manager.php';
-
+$IsIn = false;
 class ManagerClient extends Manager{
     public function __addId($id_panier)
     {
@@ -10,6 +10,28 @@ class ManagerClient extends Manager{
         
         $sql->execute();
         return $sql;
+       
+    }
+
+    public function obtenirUserPanier($userid)
+    {
+    
+            $reponse = ("SELECT * fROM tbl_panier WHERE id_utilisateur=$userid");
+            
+           
+            $i = $this->getConnexion()->query($reponse);
+            if($i->rowCount() > 0){
+                return false;
+        
+            }
+            else{
+                return true;
+            }
+            
+    
+
+           
+        
        
     }
     public function UserConnexion($id,$user, $pass){
@@ -30,7 +52,11 @@ class ManagerClient extends Manager{
                 $hash =$getpass['motDePasse'];
                 $id =$getpass["id_utilisateur"];
                 array_push($fact, password_verify($word, $hash),$id);
-                $this->__addId($id);
+                
+                if($this->obtenirUserPanier($id) == true){
+                    $this->__addId($id);
+                }
+                
                 return $fact;
                 
                

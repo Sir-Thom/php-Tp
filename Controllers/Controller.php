@@ -103,7 +103,12 @@ function obtenirSaucisse(){
     
     
 }
-
+function listeSaucissePanier()
+{
+    $Saucisse = new ManagerPanier;
+    $resultatSaucisse = $Saucisse->obtenirSaucisse($_SESSION["idpanier"]);
+    require 'views/Panier.php';
+}
 
 function listeSaucisse()
 {

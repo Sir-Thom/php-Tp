@@ -32,7 +32,7 @@ try {
             seDeconnecter();
             break;
         case "panier":
-            listeSaucisse();
+            listeSaucissePanier();
             
             break;
         default:

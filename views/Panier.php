@@ -37,7 +37,7 @@
                     </div>
                   
                   <small class="text-muted">
-                    <button type="button" id="<?php echo $enregistrement['id_saucisse'] ?>" class="saucisse btn btn-sm btn-outline-secondary ">supprimer du panier 
+                    <button type="button" id="<?php echo $enregistrement['id_saucisse'] ?>" name="saucisse"class="saucisse btn btn-sm btn-outline-secondary ">supprimer du panier 
                       <i class="fa-solid fa-trash fa-md">
                       </i>  
                     </button>

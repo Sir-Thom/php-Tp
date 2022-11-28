@@ -29,20 +29,14 @@ class ManagerPanier extends Manager
       }
     public function obtenirSaucisse($codeSaucisse)
     {
-      
-        
-       
-            $reponse = $this->getConnexion()->prepare("INSERT INTO 
-            contient(id_panier, id_saucisse) 
-            Values (
-            (SELECT id_panier FROM tbl_panier WHERE id_utilisateur = :id ),
-            (SELECT id_saucisse FROM tbl_saucisse WHERE id_saucisse = :idsaus Order By nom)
-            )");
-            $reponse ->bindparam('id', $_SESSION["idpanier"], PDO::PARAM_INT);
-            $reponse ->bindparam('idsaus', $_SESSION["idsaucisse"], PDO::PARAM_INT);
-            $reponse->execute();
+
+            $reponse = (" SELECT * fROM
+            contient wherw 
+           ");
+           
+            $i = $this->getConnexion()->query($reponse);
           
-            return  $reponse;
+            return  $i;
 
            
         

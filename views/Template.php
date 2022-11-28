@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="fr">
 
-<head>
-    <title><?php echo $titre ?></title>
+<head>    <title><?php echo $titre ?></title>
     <meta charset="utf-8">
     <!-- font https://github.com/tonsky/FiraCode-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
