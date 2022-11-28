@@ -59,7 +59,7 @@ function seConnecter()
     
 
     $userinfo = $Managerclient->UserConnexion($_POST["id"], $_POST["username"],$_POST["password"]);
-    echo $userinfo;
+    //echo $userinfo;
     if ($userinfo[0] == true ){
         $_SESSION["username"] = $_POST["username"];
     
@@ -82,12 +82,18 @@ function seConnecter()
     
 }
 
+function RemoveSaucisse(){
+    if (!isset ($_POST["idpanier"])){return;}
+    $panier = new ManagerPanier;
+    $id = $panier->RemoveSaucisse($_SESSION["idsaucisse"]);
+}
+
 function obtenirSaucisse(){
     if (!isset ($_POST["idsaucisse"])){return;}
-    $codeSaucisse =htmlentities(($_POST["idsaucisse"]));
+    $codeSaucisse =(int)($_POST["idsaucisse"]);
   
     $panier = new ManagerPanier;
-    $_SESSION["idsaucisse"]=$codeSaucisse;
+    $_SESSION["idsaucisse"]=(int)$codeSaucisse;
     $id = $panier->obtenirSaucisse($codeSaucisse);
     //echo $resultatPays;
     //envoye code 
@@ -95,12 +101,7 @@ function obtenirSaucisse(){
 
     echo json_encode($id);
     
-    /*if (!isset ($_POST["codePays"])){return;}
-    $codePays =htmlentities(($_POST["codePays"]));
-    //$pays = new ;
-    $resultatPays= $pays->obtenirProvinces($codePays);
-    //echo $resultatPays;
-    echo json_encode($pays->obtenirProvinces($codePays));*/
+    
 }
 
 

@@ -18,7 +18,9 @@ try {
             break;
         case 'accueil':
             listeSaucisse();
-            
+            break;
+        case 'RemoveSaucisse':
+            RemoveSaucisse();
             break;
         case 'obtenirSaucisse':
             obtenirSaucisse();

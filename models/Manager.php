@@ -22,7 +22,7 @@ class Manager
 
         // https://www.php.net/manual/en/pdo.construct.php
         $connexion = new \PDO($dsn, $user, $pass, $options);
-        //echo $connexion;
+        
         return $connexion;
     }
 }
