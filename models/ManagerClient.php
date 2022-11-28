@@ -2,7 +2,16 @@
 require_once 'models/Manager.php';
 
 class ManagerClient extends Manager{
-    
+    public function __addId($id_panier)
+    {
+        $sql =$this->getConnexion()->prepare("INSERT INTO tbl_panier(id_utilisateur) Values (:id)");
+       
+        $sql->bindparam('id',$id_panier, PDO::PARAM_INT);
+        
+        $sql->execute();
+        return $sql;
+       
+    }
     public function UserConnexion($id,$user, $pass){
             $fact = array();
             $reponse = $this->getConnexion()->prepare( 'SELECT * FROM tbl_utilisateur
@@ -20,8 +29,8 @@ class ManagerClient extends Manager{
                 $word = $pass;
                 $hash =$getpass['motDePasse'];
                 $id =$getpass["id_utilisateur"];
-                $_POST["id"] = $id;
                 array_push($fact, password_verify($word, $hash),$id);
+                $this->__addId($id);
                 return $fact;
                 
                

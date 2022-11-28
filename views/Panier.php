@@ -8,7 +8,7 @@
   <?php } ?>
 <br />
 
- 
+<?php echo $_SESSION["idpanier"];?>
 
   
 <?php ?>
@@ -58,9 +58,7 @@
                   <th scope="col" class="border-0 bg-light">
                     <div class="py-2 text-uppercase">Price</div>
                   </th>
-                  <th scope="col" class="border-0 bg-light">
-                    <div class="py-2 text-uppercase">Quantity</div>
-                  </th>
+                 
                   <th scope="col" class="border-0 bg-light">
                     <div class="py-2 text-uppercase">Remove</div>
                   </th>

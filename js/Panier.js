@@ -15,6 +15,7 @@ function abonnement(){
 }
 
 function AfficherPanier(saucisse) {
+    //add form here
     console.log(saucisse)
 }
 function SaucisseClick(event) {
@@ -22,6 +23,9 @@ function SaucisseClick(event) {
     
     const saucisse = event.currentTarget;
     const idsaucisse = saucisse.id;
+ //   const info = 
+    console.log(saucisse)
+    console.log(idsaucisse)
     const formData = new FormData();
     console.log(idsaucisse);
     formData.append("idsaucisse",idsaucisse)
@@ -42,6 +46,6 @@ function SaucisseClick(event) {
     .then(saucisse => {
         console.log("teste");
         //AfficherCodepays(codePays);
-       AfficherPanier(saucisse);
+       AfficherPanier(idsaucisse);
     });
 }
