@@ -53,6 +53,7 @@ function seConnecter()
     if(empty(htmlentities($_POST["idsaucisse"]))&& empty( htmlentities($_POST["idpanier"]))){
         $_SESSION["idsaucisse"];
         $_SESSION["idpanier"];
+
      
     }
    $Managerclient = new ManagerClient();
@@ -83,9 +84,11 @@ function seConnecter()
 }
 
 function RemoveSaucisse(){
-    if (!isset ($_POST["idpanier"])){return;}
+    
     $panier = new ManagerPanier;
-    $id = $panier->RemoveSaucisse($_SESSION["idsaucisse"]);
+    $panier->RemoveSaucisse($_SESSION["idsaucisse"]);
+    $panier->obtenirSaucisse($_SESSION["idsaucisse"]);
+    header("location:index.php?action=panier");
 }
 
 function obtenirSaucisse(){
@@ -99,14 +102,23 @@ function obtenirSaucisse(){
     //envoye code 
     
 
+   echo json_encode($id);
+    
+    
+}
+function AjoutSaucisse(){
+    if (!isset ($_POST["idsaucisse"])){return;}
+    $codeSaucisse =(int)($_POST["idsaucisse"]);
+  
+    $panier = new ManagerPanier;
+    $_SESSION["idsaucisse"]=(int)$codeSaucisse;
+    $id = $panier->AjoutSaucisse($codeSaucisse);
     echo json_encode($id);
-    
-    
 }
 function listeSaucissePanier()
 {
     $Saucisse = new ManagerPanier;
-    $resultatSaucisse = $Saucisse->obtenirSaucisse($_SESSION["idpanier"]);
+    $resultatSaucisse = $Saucisse->obtenirSaucisse($_SESSION["IPAN"]);
     require 'views/Panier.php';
 }
 
