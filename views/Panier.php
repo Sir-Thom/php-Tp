@@ -11,14 +11,44 @@
  
 
   
-<?php if($_SESSION == ""){ ?>
+<?php ?>
     <div class="pb-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
 
-          <!-- Shopping cart table -->
-          <div class="table-responsive">
+        <?php while ($enregistrement = $resultatSaucisse->fetch()) {?>
+            <div class=" col-md-4 ">
+              <div class=" card">
+                <p class=" card-title" id="idsaucisse"> <?php echo $enregistrement['nom'] ?> 
+                </p>            
+                  <div class="col">
+                    <div class="shadow-sm">
+                      <svg  class="img-responsive tocenter" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                        <image class="img-responsive tocenter" href="<?php echo $enregistrement['destinationImage'] ?>" height="200" width="200"/>
+                      </svg>
+                      </br>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <label> <?php echo $enregistrement['prix'] ?>$ 
+                      </label>         
+                    </div>
+                  
+                  <small class="text-muted">
+                    <button type="button" id="<?php echo $enregistrement['id_saucisse'] ?>" class="saucisse btn btn-sm btn-outline-secondary ">supprimer du panier 
+                      <i class="fa-solid fa-trash fa-md">
+                      </i>  
+                    </button>
+                  </small>
+                  </div>
+              </div>
+            </div>
+            <?php }?>
+            <?php $resultatSaucisse->closeCursor();?>
+            
+          <!--<div class="table-responsive">
             <table class="table">
               <thead>
                 <tr>
@@ -35,10 +65,10 @@
                     <div class="py-2 text-uppercase">Remove</div>
                   </th>
                 </tr>
-              </thead>
+              </thead>-->
 
                  <!-- ce qui doit dupliquer à chaque items ajouter au panier -->
-              <tbody>
+              <!--<tbody>
                 <tr>
                   <th scope="row" class="border-0">
                     <div class="p-2">
@@ -51,7 +81,7 @@
                   <td class="border-0 align-middle"><strong>prix</strong></td>
                   <td class="border-0 align-middle"><strong>quantité</strong></td>
                   <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
-                </tr>
+                </tr>-->
                
               </tbody>
             </table>
@@ -71,7 +101,7 @@
 
     
 
-<?php } ?>
+<?php ?>
                 
    
 <script src="js/Panier.js"></script>
