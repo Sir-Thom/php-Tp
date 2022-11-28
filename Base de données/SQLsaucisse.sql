@@ -12,7 +12,7 @@ USE tbl_saucisse;
 CREATE TABLE tbl_utilisateur(
         id_utilisateur Int  Auto_increment  NOT NULL ,
         nomUtilisateur Varchar (50) NOT NULL ,
-        motDePasse     Varchar (50) NOT NULL
+        motDePasse     Varchar (120) NOT NULL
 	,CONSTRAINT tbl_utilisateur_PK PRIMARY KEY (id_utilisateur)
 	,CONSTRAINT AK_nomUtilisateur UNIQUE(nomUtilisateur)
     
@@ -21,13 +21,11 @@ CREATE TABLE tbl_utilisateur(
 INSERT INTO tbl_utilisateur
 (nomUtilisateur, motDePasse)
 Values
-('U1', 'mdp1'),
-('U2', 'mdp2'),
-('U3', 'mdp3'),
-('U4', 'mdp4'),
-('U4', 'mdp5');
-
-CREATE PROCEDURE insciption()
+('Canard', 	'$2y$10$vbsYkoMFEKRN6SpstgCNWuEpy5XZNxuwzVSXqFZ/fnEGlJFjvUXvW'), /*manger*/
+('Joe', 	'$2y$10$PuyHG790NHvysQsIAIjBS.sr9p8p89WFMxNbKKa1uewCpM2FB.pFO'), /*Bloe*/
+('Ken', 	'$2y$10$E9fEwc4g4P6HaG5bQ3hAQu/UGqKDhEMXD/Hk6LNwCj5HrqDtwvTv6'), /*kababoum*/
+('Jane', 	'$2y$10$wGFZ2QgXmG6DiE/Q4JnYme6xL7q/UOvV7Ls0JdI.6teIsKWFYE4Xu'), /*babaje*/
+('Bob', 	'$2y$10$QsPHahyqIfTfnpPduIhwXujQWv.5bzmp.esYhw97fPPS8071uwntG'); /*saucisse*/
 
 #------------------------------------------------------------
 # Table: tbl_saucisse

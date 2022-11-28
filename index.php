@@ -32,8 +32,7 @@ try {
             seDeconnecter();
             break;
         case "panier":
-            //echo $_SESSION["idpanier"];
-            panier();
+            listeSaucisse();
             
             break;
         default:
