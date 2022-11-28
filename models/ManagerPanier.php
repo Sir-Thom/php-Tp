@@ -11,45 +11,26 @@ class ManagerPanier extends Manager
     }
     public function RemoveSaucisse($codeSaucisse)
     {
-      
-        
-       
-            $reponse = $this->getConnexion()->prepare("INSERT INTO tbl_panier
-            (id_panier, id_saucisse) 
-            Values (
-            (DELETE  FROM tbl_panier WHERE id_utilisateur = :id");
-            $reponse ->bindparam('id', $_SESSION["idpanier"], PDO::PARAM_INT);
-            $reponse->execute();
+        $reponse = $this->getConnexion()->prepare("INSERT INTO tbl_panier
+        (id_panier, id_saucisse) 
+        Values (
+        (DELETE  FROM tbl_panier WHERE id_utilisateur = :id");
+        $reponse ->bindparam('id', $_SESSION["idpanier"], PDO::PARAM_INT);
+        $reponse->execute();
           
-            return  $reponse;
-
-           
-        
-       
+        return  $reponse; 
       }
-    public function obtenirSaucisse($codeSaucisse)
-    {
-      
-        
-       
-            $reponse = $this->getConnexion()->prepare("INSERT INTO 
-            contient(id_panier, id_saucisse) 
-            Values (
-            (SELECT id_panier FROM tbl_panier WHERE id_utilisateur = :id ),
-            (SELECT id_saucisse FROM tbl_saucisse WHERE id_saucisse = :idsaus Order By nom)
-            )");
-            $reponse ->bindparam('id', $_SESSION["idpanier"], PDO::PARAM_INT);
-            $reponse ->bindparam('idsaus', $_SESSION["idsaucisse"], PDO::PARAM_INT);
-            $reponse->execute();
+    public function obtenirSaucisse()
+    {     
+        $reponse = $this->getConnexion()->prepare(" SELECT contient.id_saucisse, tbl_saucisse.nom, tbl_saucisse.destinationImage, tbl_saucisse.prix
+                                                    FROM (contient
+                                                    INNER JOIN tbl_saucisse ON contient.id_saucisse = tbl_saucisse.id_saucisse)
+                                                    WHERE contient.id_panier = idpanier");
+        $reponse ->bindparam('idspanier', $_SESSION["idpanier"], PDO::PARAM_INT);
+        $reponse->execute();
           
-            return  $reponse;
-
-           
-        
-       
-      }
-   
-    
+        return  $reponse;       
+    }       
 }
 
 ?>
