@@ -11,7 +11,7 @@
  
 
   
-<?php if($_SESSION == ""){ ?>
+<?php ?>
     <div class="pb-5">
     <div class="container">
       <div class="row">
@@ -37,7 +37,7 @@
                     </div>
                   
                   <small class="text-muted">
-                    <button type="button" id="<?php echo $enregistrement['id_saucisse'] ?>" class="saucisse btn btn-sm btn-outline-secondary ">ajouter au panier 
+                    <button type="button" id="<?php echo $enregistrement['id_saucisse'] ?>" class="saucisse btn btn-sm btn-outline-secondary ">supprimer du panier 
                       <i class="fa-solid fa-trash fa-md">
                       </i>  
                     </button>
@@ -101,7 +101,7 @@
 
     
 
-<?php } ?>
+<?php ?>
                 
    
 <script src="js/Panier.js"></script>

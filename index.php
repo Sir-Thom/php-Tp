@@ -30,7 +30,7 @@ try {
             seDeconnecter();
             break;
         case "panier":
-            panier();
+            listeSaucisse();
             
             break;
         default:
