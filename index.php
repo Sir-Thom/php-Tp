@@ -21,6 +21,7 @@ try {
             break;
         case 'RemoveSaucisse':
             RemoveSaucisse();
+            
             break;
         case 'obtenirSaucisse':
             obtenirSaucisse();
@@ -32,9 +33,13 @@ try {
             seDeconnecter();
             break;
         case "panier":
-            listeSaucisse();
+            listeSaucissePanier();
             
             break;
+        case 'ajoutSaucisse':
+            AjoutSaucisse();
+                break;
+        
         default:
             throw new Exception('Aucune page spécifique demandée');
     }
